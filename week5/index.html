@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hi, I'm Shai!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: pink;
+}
+
+.header {
+	background-image: linear-gradient(white, pink);
+	padding: 30px;
+	text-align: center;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 10px;
+	border-radius: 25px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.footer {
+  background-color: pink;
+  padding: 10px;
+  text-align: center;
+}
+
+#subtext {
+	font-style: italic;
+}
+
+@media (max-width: 600px) {
+	.column {
+		width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Hi, I'm Shai!</h2>
+</div>
+
+<div class="row">
+  <div class="column" style="background-color:#ccc;">
+  I'm just a simple 21-year old Pasayeño studying at Asia Pacific College as frustrated Game Development student!
+  <br><br>
+  I've been a scholar student all my life; without scholarships I'd be as good as dead!
+  <br><br>
+  I'm a dayfly!
+  </div>
+  <div class="column" style="background-color:#eee;">
+  <img src="https://trello.com/1/cards/638959f2682e4e007dc80231/attachments/63895bca7189fd03067a43aa/previews/63895bca7189fd03067a43b6/download/MicrosoftTeams-image.png.webp" alt="Shai Valdez" style="width:350px;height:350px">
+  </div>
+  <div class="column" style="background-color:#ddd;">
+  I really like hanging out with my friends!
+  <br><br>
+  I really value quality time with people!
+  <br><br>
+  I have so much love and power for a small body of mine!
+  <br><br>
+  I have sensory, emotional, and mental issues.
+  </div>
+</div>
+
+<div class="footer">
+  <p>That's me, and if you can't tell, I really like cats!</p>
+  <p id="subtext">But that doesn't mean I don't like dogs!</p>
+  <p>Click here to see my references!</p>
+</div>
+
+</body>
+</html>
