@@ -144,7 +144,7 @@ alert("Whoa, you're heading into new territory!");
       <script>
         document.getElementById("math").innerHTML = Math.random();
       </script>
-      <p>Here, have another random number again!</p>
+      <button onclick="document.getElementById('math').innerHTML = getRndInteger(1,10)">Click Me to Get a Random Number Again</button>
       <p id = "math"></p>
       <script>
         function getRndInteger(min, max) {
