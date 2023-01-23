@@ -144,6 +144,13 @@ alert("Whoa, you're heading into new territory!");
       <script>
         document.getElementById("math").innerHTML = Math.random();
       </script>
+      <p>Here, have another random number again!</p>
+      <p id = "math"></p>
+      <script>
+        function getRndInteger(min, max) {
+          return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+      </script>
     </div>
     <div class="card">
       <h2>SOME MORE TIDBITS ABOUT ME</h2>
