@@ -111,6 +111,10 @@ body {
 </style>
 </head>
 <body>
+<script>
+//  a little alert box before people see my website
+alert("Whoa, you're heading into new territory!");
+</script>
 
 <div class="header">
   <h1>Hi, I'm Shai!</h1>
@@ -127,41 +131,59 @@ body {
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <h2>SOME TIDBITS ABOUT ME</h2>
+      <h5>Read this and get to know me, January 2023</h5>
+      <div class="fakeimg" style="height:550px;">
+        <img id="tidbitsImage" src="gamerShai.jpg" style="height:500px">
+      </div>
+      <p>I'm just a simple Pasayeño studying at Asia Pacific College as a frustrated Game Development student!</p>
+      <p>I've been a scholar student all my life; without scholarships I'd be as good as dead!</p>
+      <p>I'm a dayfly!</p>
     </div>
     <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <h2>SOME MORE TIDBITS ABOUT ME</h2>
+      <h5>Read more of this and get to know more about me, January 2023</h5>
+      <div class="fakeimg" style="height:350px;">
+        <img id="tidbitsImage" src="friendShai.jpg" style="height:300px">
+      </div>
+      <p>I really like hanging out with my friends!</p>
+      <p>I really value quality time with people!</p>
+      <p>I have so much love and power for a small body of mine!</p>
+      <p>I have sensory, emotional, and mental issues.</p>
     </div>
   </div>
   <div class="rightcolumn">
     <div class="card">
       <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <div class="fakeimg" style="height:435px;">
+          <!-- a button to show cool_shai.png -->
+         <button onclick="document.getElementById('myImage').src='cool_shai.png'">Click here for Cool Shai</button>
+         <img id="myImage" src="picture.png" style="width:350px;height:350px">
+         <!-- a button to show sleepy shai picture -->
+         <button onclick="document.getElementById('myImage').src='picture.png'">Click here for Sleepy Shai</button>
+      </div>
+      <p>I'm a twenty-year-old all rounder, year round. Jack of all trades, mastering all but none.</p>
+      <p id="facts"></p>
+      <script>
+        const person = {
+          firstName: "Cheyenne",
+          lastName: "Valdez",
+          city: "Pasay",
+          age: 20,
+        };
+      </script>
     </div>
     <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
+      <h3>Cool, Recent Pictures of Mine!</h3>
+      <div class="fakeimg"><p><img id="recentImage" src="badmintonShai.jpg" style="width:300px;height:300px"></p></div>
+      <div class="fakeimg"><p><img id="recentImage" src="bar.jpg" style="width:300px;height:300px"></p></div>
+      <div class="fakeimg"><p><img id="recentImage" src="dogShai.jpg" style="width:300px"></p></div>
     </div>
   </div>
 </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+  <h2>© Asia Pacific College 2023. All Rights Reserved</h2>
 </div>
 
 </body>
