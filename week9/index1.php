@@ -171,11 +171,11 @@ alert("Whoa, you're heading into new territory!");
       </div>
       <p>Look at this neat form!</p>
         <?php
-            // define variables and set to empty values
+			// define variables and set to empty values
             $nameErr = $emailErr = $genderErr = $websiteErr = "";
             $name = $email = $gender = $comment = $website = "";
-
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (empty($_POST["name"])) {
                     $nameErr = "Name is required";
                 } else {
@@ -218,14 +218,14 @@ alert("Whoa, you're heading into new territory!");
                     $gender = test_input($_POST["gender"]);
                 }
             }
-
+			
             function test_input($data) {
                 $data = trim($data);
                 $data = stripslashes($data);
                 $data = htmlspecialchars($data);
                 return $data;
-            }
-        ?>
+			}
+		?>
 
         <h2>PHP Form Validation Example</h2>
         <p><span class="error">* required field</span></p>
@@ -261,6 +261,37 @@ alert("Whoa, you're heading into new territory!");
             echo $comment;
             echo "<br>";
             echo $gender;
+        ?>
+				<?php
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+				$servername = "localhost";
+				$username = "root";
+				$password = "";
+				$dbname = "myProfileDB";
+				$conn = new mysqli($servername, $username, $password);	
+
+				if ($conn->connect_error) {
+					die("Connection failed: " . $conn->connect_error);
+				}
+				echo "Connected successfully";
+
+				$sql = "CREATE TABLE MyVisitors (
+				id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+				name VARCHAR(30) NOT NULL,
+				email NVARCHAR(50),
+				website NVARCHAR(50),
+				comment TEXT,
+				gender VARCHAR(10)
+				)";
+				
+				$conn->close();
+				
+				if ($conn->query($sql) === TRUE) {
+					echo "Table MyVisitors created successfully";
+				} else {
+					echo "Error creating table: " . $conn->error;
+				} 
+			}
         ?>
     </div>
   </div>
@@ -301,5 +332,3 @@ alert("Whoa, you're heading into new territory!");
 
 </body>
 </html>
-
-
