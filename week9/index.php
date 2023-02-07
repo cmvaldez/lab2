@@ -270,7 +270,7 @@ alert("Whoa, you're heading into new territory!");
           $servername = "localhost";
           $username = "webprogmi211";
           $password = "webprogmi211";
-          $dbname = "mydbwebprogmi211";
+          $dbname = "webprogmi211";
           
           // Create connection
           $conn = new mysqli($servername, $username, $password, $dbname);
