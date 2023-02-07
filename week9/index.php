@@ -122,9 +122,9 @@ alert("Whoa, you're heading into new territory!");
 </div>
 
 <div class="topnav">
-  <a href="index1.html">Home</a>
-  <a href="resources.html">Resources</a>
-  <a href="#">Link</a>
+  <a href="index.php">Home</a>
+  <a href="resources1.html">Resources</a>
+  <a href="guests.php">Show Form Entries</a>
   <a href="#" style="float:right">Link</a>
 </div>
 
@@ -262,6 +262,36 @@ alert("Whoa, you're heading into new territory!");
             echo "<br>";
             echo $gender;
         ?>
+
+        <?php
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") 
+        {
+          $servername = "localhost";
+          $username = "root";
+          $password = "";
+          $dbname = "mydbwebprogmi211";
+          
+          // Create connection
+          $conn = new mysqli($servername, $username, $password, $dbname);
+          // Check connection
+          if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+          }
+          echo "Connected successfully";    
+          
+          $sql = "INSERT INTO MyGuests (name, email, website, comment, gender)
+          VALUES ('$name', '$email', '$website', '$comment', '$gender')";
+          
+          if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+          } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+          }
+          
+          $conn->close();
+        }
+        ?>        
     </div>
   </div>
   <div class="rightcolumn">
