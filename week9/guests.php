@@ -56,8 +56,8 @@ body {
   <p>
   <?php
           $servername = "localhost";
-          $username = "root";
-          $password = "";
+          $username = "webprogmi211";
+          $password = "webprogmi211";
           $dbname = "mydbwebprogmi211";
           
           // Create connection
@@ -67,7 +67,7 @@ body {
             die("Connection failed: " . $conn->connect_error);
           }
 
-          $sql = "SELECT name, email, website, comment, gender FROM MyGuests";
+          $sql = "SELECT name, email, website, comment, gender FROM cmvaldez_MyGuests";
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
