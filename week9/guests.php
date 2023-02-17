@@ -55,9 +55,9 @@ body {
   <p>Look at all the people who signed up on my website's form.</p>
   <p>
   <?php
-          $servername = "localhost";
+          $servername = "Remote Server 1";
           $username = "webprogmi211";
-          $password = "webprogmi211";
+          $password = "j@zzyAngle30";
           $dbname = "webprogmi211";
           
           // Create connection

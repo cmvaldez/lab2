@@ -267,9 +267,9 @@ alert("Whoa, you're heading into new territory!");
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") 
         {
-          $servername = "localhost";
+          $servername = "Remote Server 1";
           $username = "webprogmi211";
-          $password = "webprogmi211";
+          $password = "j@zzyAngle30";
           $dbname = "webprogmi211";
           
           // Create connection
